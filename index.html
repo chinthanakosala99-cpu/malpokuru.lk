@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>malpokuru.lk - Home & Shop</title>
+    <link rel="stylesheet" href="1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="fixed-top">
+        <div class="promo-banner">
+            <div class="banner-text">
+                <h2>🌸  m a l p o k u r u . l k</h2>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>          
+        
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><h5>The bouquet of freshness and trust!💐</h5></li>
+            </ul>
+            <div class="nav-icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div> 
+        </nav>
+    </header>
+
+    <div id="aboutMenu" class="about-popup">
+        <div class="popup-content">
+            <h3>About Us</h3>
+            <p>Welcome to Malpokuru.lk! We provide fresh flowers with trust and love across Sri Lanka. 🌸</p>
+            <button onclick="toggleMenu()" class="close-popup">Close</button>
+        </div>
+    </div>
+        
+    <div class="features-container">
+        <div class="feature-item"><i class="fa-solid fa-truck"></i><p>ONLINE <br> SHIPPING</p></div>
+        <div class="feature-item"><i class="fa-solid fa-percent"></i><p>ORDER<br> DISCOUNT</p></div>
+        <div class="feature-item"><i class="fa-solid fa-headset"></i><p>SUPPORT <br>24/7</p></div>
+        <div class="feature-item"><i class="fa-solid fa-box"></i><p>SAFETY<br> PACKING</p></div>
+    </div>    
+
+    <div class="hero-wrapper">
+        <div class="hero-container">
+            <div class="slider">
+                <img src="3.jpg" class="hero-img active">
+                <img src="shop2.jpg" class="hero-img">
+                <img src="17.jpg" class="hero-img">
+                <img src="15.jpg" class="hero-img">
+                <img src="16.jpg" class="hero-img">
+                <img src="12.jpg" class="hero-img">
+            </div>
+        </div>
+        <div class="hero-button-area">
+            <a href="#collection">
+                <button class="shop-btn">SHOP NOW</button>
+            </a>
+        </div>
+    </div>
+
+    <div id="collection" class="shop-section">
+        
+        <h2 class="section-subtitle">✨ Best Sellers</h2>
+        <div class="scroll-wrapper">
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="shop2.jpg">
+                    <hr>
+                    <h3>Pink Romance</h3>
+                    <p class="price">Rs. 3,500</p>
+                    <button class="button flower-fill-btn">
+                        <span class="button-fill-decor"></span>
+                        <div class="flower-particles">
+                            <span class="flower p1">🌸</span><span class="flower p2">🌼</span>
+                            <span class="flower p3">🌸</span><span class="flower p4">🌼</span>
+                            <span class="flower p5">🌸</span><span class="flower p6">🌼</span>
+                        </div>
+                        <div class="button-content">
+                            <div class="button__icon"><i class="fa-solid fa-eye" style="color: white;"></i></div>
+                            <span class="button__text">VIEW DETAILS</span>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="product-card">
+                    <img src="shop2.jpg">
+                    <hr>
+                    <h3>Crimson Velvet</h3>
+                    <p class="price">Rs. 4,200</p>
+                    <button class="button flower-fill-btn">
+                        <span class="button-fill-decor"></span>
+                        <div class="flower-particles">
+                            <span class="flower p1">🌸</span><span class="flower p2">🌼</span>
+                            <span class="flower p3">🌸</span><span class="flower p4">🌼</span>
+                            <span class="flower p5">🌸</span><span class="flower p6">🌼</span>
+                        </div>
+                        <div class="button-content">
+                            <div class="button__icon"><i class="fa-solid fa-eye" style="color: white;"></i></div>
+                            <span class="button__text">VIEW DETAILS</span>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="product-card">
+                    <img src="shop2.jpg">
+                    <hr>
+                    <h3>White Elegance</h3>
+                    <p class="price">Rs. 3,800</p>
+                    <button class="button flower-fill-btn">
+                        <span class="button-fill-decor"></span>
+                        <div class="flower-particles">
+                            <span class="flower p1">🌸</span><span class="flower p2">🌼</span>
+                            <span class="flower p3">🌸</span><span class="flower p4">🌼</span>
+                            <span class="flower p5">🌸</span><span class="flower p6">🌼</span>
+                        </div>
+                        <div class="button-content">
+                            <div class="button__icon"><i class="fa-solid fa-eye" style="color: white;"></i></div>
+                            <span class="button__text">VIEW DETAILS</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-subtitle">🌸 Fresh Arrivals</h2>
+        <div class="scroll-wrapper">
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="shop2.jpg">
+                    <hr>
+                    <h3>Yellow Sun</h3>
+                    <p class="price">Rs. 3,100</p>
+                    <button class="button flower-fill-btn">
+                        <span class="button-fill-decor"></span>
+                        <div class="flower-particles">
+                            <span class="flower p1">🌸</span><span class="flower p2">🌼</span>
+                            <span class="flower p3">🌸</span><span class="flower p4">🌼</span>
+                            <span class="flower p5">🌸</span><span class="flower p6">🌼</span>
+                        </div>
+                        <div class="button-content">
+                            <div class="button__icon"><i class="fa-solid fa-eye" style="color: white;"></i></div>
+                            <span class="button__text">VIEW DETAILS</span>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="product-card">
+                    <img src="shop2.jpg">
+                    <hr>
+                    <h3>Ocean Breeze</h3>
+                    <p class="price">Rs. 4,800</p>
+                    <button class="button flower-fill-btn">
+                        <span class="button-fill-decor"></span>
+                        <div class="flower-particles">
+                            <span class="flower p1">🌸</span><span class="flower p2">🌼</span>
+                            <span class="flower p3">🌸</span><span class="flower p4">🌼</span>
+                            <span class="flower p5">🌸</span><span class="flower p6">🌼</span>
+                        </div>
+                        <div class="button-content">
+                            <div class="button__icon"><i class="fa-solid fa-eye" style="color: white;"></i></div>
+                            <span class="button__text">VIEW DETAILS</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/94719739598" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+    </a>
+    
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>m a l p o k u r u . l k</h3>
+                <p>The bouquet of freshness and trust!💐</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#collection">Shop Now</a></li>
+                    <li><a href="javascript:void(0)" onclick="toggleMenu()">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-phone"></i> +94 71 973 9598</p>
+                <p><i class="fa-solid fa-location-dot"></i> Colombo, Sri Lanka</p>
+            </div>
+
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/94719739598"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; 2026 malpokuru.lk - All Rights Reserved.</p>
+            </div>
+            
+            <div class="developed-by">
+                <span>Developed with ❤️ by</span>
+                <a href="#" class="company-link">
+                    <span class="company-name">KOSHALA NEXUS<sup>®</sup></span> 
+                    <div class="glow-dot"></div>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".hero-img");
+        function showNextSlide() {
+            slides[currentSlide].classList.remove("active");
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add("active");
+        }
+        setInterval(showNextSlide, 3000);
+
+        function toggleMenu() {
+            const menu = document.getElementById("aboutMenu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+    </script>
+    
+</body>
+</html>
