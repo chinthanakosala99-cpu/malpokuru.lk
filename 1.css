@@ -1,0 +1,388 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+/* පිටුවේ පසුබිම - Ice Blue */
+body { background-color: #f0f7ff; overflow-x: hidden; }
+
+/* Header & Promo Bar */
+.fixed-top { position: sticky; top: 0; z-index: 1000; width: 100%; background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.promo-banner { width: 100%; height: 45px; display: flex; align-items: center; justify-content: center; background-color: #0a192f; position: relative; }
+.banner-text h2 { color: #ffffff; letter-spacing: 2px; font-size: 0.85rem; text-transform: uppercase; }
+.menu-icon { position: absolute; right: 20px; color: white; font-size: 1.2rem; cursor: pointer; }
+
+/* Navbar - Blue Gradient */
+.navbar { 
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 12px 20px; 
+    background: linear-gradient(90deg, #1e3a8a, #3b82f6); 
+    color: white; 
+}
+
+/* Features - Blue Icons */
+.features-container { display: flex; justify-content: space-around; padding: 20px; background: white; margin: 10px 0; text-align: center; font-size: 10px; font-weight: bold; border-bottom: 2px solid #e0e7ff; }
+.feature-item i { font-size: 22px; color: #1e40af; margin-bottom: 5px; }
+.feature-item p { color: #1e3a8a; }
+
+/* Hero Slider Area */
+.hero-wrapper { display: flex; flex-direction: column; align-items: center; padding: 20px; width: 100%; }
+.hero-container { position: relative; width: 100%; max-width: 450px; aspect-ratio: 1 / 1; overflow: hidden; border-radius: 15px; box-shadow: 0 8px 25px rgba(30, 58, 138, 0.2); }
+.hero-img { position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s; }
+.hero-img.active { opacity: 1; }
+
+.shop-btn { 
+    margin-top: 25px; padding: 12px 45px; background: #1e40af; color: white; border: none; border-radius: 25px; 
+    font-weight: bold; cursor: pointer; animation: blueGlow 2s infinite; 
+}
+@keyframes blueGlow {
+    0% { box-shadow: 0 0 5px #1e40af; }
+    50% { box-shadow: 0 0 20px #3b82f6; }
+    100% { box-shadow: 0 0 5px #1e40af; }
+}
+
+/* Shop Section */
+.section-subtitle { margin: 25px 20px 10px; font-size: 20px; color: #1e3a8a; font-weight: bold; }
+.scroll-wrapper { width: 100%; overflow-x: auto; padding: 10px 20px 20px; white-space: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.scroll-wrapper::-webkit-scrollbar { display: none; }
+.product-grid { display: flex; gap: 15px; }
+
+.product-card {
+    flex: 0 0 175px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 15px;
+    text-align: center;
+    white-space: normal;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s;
+}
+.product-card:hover { transform: translateY(-5px); }
+.product-card img { width: 100%; height: 140px; object-fit: cover; border-radius: 10px; margin-bottom: 10px; }
+.price { color: #d32f2f; font-weight: bold; font-size: 16px; margin-bottom: 12px; display: block; }
+
+/* --- BLUE THEME BUY NOW BUTTON --- */
+.button.flower-fill-btn {
+    text-decoration: none;
+    line-height: 1;
+    border-radius: 1.5rem;
+    overflow: visible; 
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #1e40af; 
+    cursor: pointer;
+    width: 100%;
+    height: 42px;
+    display: block;
+    padding: 0;
+    z-index: 10;
+}
+
+.button__icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 42px;
+    height: 100%;
+    background-color: #1e40af; 
+    display: grid;
+    place-items: center;
+    border-radius: 1.4rem 0 0 1.4rem;
+    z-index: 5;
+}
+
+.button-fill-decor {
+    position: absolute;
+    left: 42px; 
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #1e40af; 
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-out;
+    z-index: 1;
+    border-radius: 0 1.4rem 1.4rem 0;
+}
+
+.button-content { display: flex; align-items: center; height: 100%; }
+
+.button__text {
+    flex: 1;
+    padding-left: 45px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #1e40af;
+    transition: color 0.3s;
+    position: relative;
+    z-index: 4;
+}
+
+.flower-fill-btn:hover .button__text { color: #fff; }
+.flower-fill-btn:hover .button-fill-decor { transform: scaleX(1); }
+
+/* Flower Burst Animation */
+.flower-particles { position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+.flower { position: absolute; font-size: 1.2rem; opacity: 0; top: 50%; left: 50%; }
+
+.flower-fill-btn:hover .flower {
+    animation: flowerBurst 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes flowerBurst {
+    0% { top: 50%; left: 50%; opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+    20% { opacity: 1; }
+    100% { opacity: 0; transform: translate(var(--tx), var(--ty)) scale(1.2) rotate(var(--rot)); }
+}
+
+.p1 { --tx: -65px; --ty: -55px; --rot: 45deg; }
+.p2 { --tx: 65px; --ty: -55px; --rot: -45deg; }
+.p3 { --tx: -75px; --ty: 10px; --rot: 90deg; }
+.p4 { --tx: 75px; --ty: 10px; --rot: -90deg; }
+.p5 { --tx: -45px; --ty: 65px; --rot: 135deg; }
+.p6 { --tx: 45px; --ty: 65px; --rot: -135deg; }
+
+/* Floating WhatsApp */
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; z-index: 2000; }
+.whatsapp-icon { width: 55px; }
+
+/* About Us Popup */
+.about-popup { display: none; position: fixed; top: 60px; right: 20px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 25px rgba(0,0,0,0.2); z-index: 3000; width: 280px; border-left: 5px solid #1e40af; }
+.close-popup { margin-top: 15px; background: #1e40af; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; width: 100%; }
+
+
+/* --- Footer Styles --- */
+.main-footer {
+    background-color: #0a192f; /* Dark Navy Blue */
+    color: #ffffff;
+    padding: 40px 20px 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-brand h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.footer-brand p {
+    font-size: 13px;
+    color: #cbd5e1;
+}
+
+.footer-links h4, .footer-contact h4, .footer-social h4 {
+    color: #3b82f6; /* Bright Blue */
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #3b82f6;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #cbd5e1;
+}
+
+.footer-contact i {
+    margin-right: 10px;
+    color: #3b82f6;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #3b82f6;
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #1e293b;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+
+/* --- Improved Footer Bottom & Company Credit --- */
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding: 25px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-copyright p {
+    font-size: 13px;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+}
+
+.developed-by {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #cbd5e1;
+}
+
+.company-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+}
+
+.company-name {
+    font-weight: 800;
+    color: #3b82f6; /* ඔයාගේ Company නම ලස්සන නිල් පාටින් */
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+/* Company නම උඩට Mouse එක ගෙනිච්චම වෙනස් වෙන විදිහ */
+.company-link:hover .company-name {
+    color: #60a5fa;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* පොඩි ලස්සන Animation එකක් */
+.glow-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #10b981; /* Green dot (Online/Active look) */
+    border-radius: 50%;
+    box-shadow: 0 0 8px #10b981;
+    animation: pulse-dot 1.5s infinite;
+}
+
+@keyframes pulse-dot {
+    0% { transform: scale(0.9); opacity: 0.7; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(0.9); opacity: 0.7; }
+}
+
+/* Mobile වලට පෙනුම වෙනස් කිරීම */
+@media (max-width: 600px) {
+    .footer-bottom {
+        padding-bottom: 80px; /* WhatsApp Button එකට ඉඩ තැබීමට */
+    }
+}
+ /* Preloader Full Screen Style */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #0a192f; /* පරණ නිල් පාට පසුබිම */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease, visibility 0.8s;
+}
+
+/* Loading Card Style */
+.card {
+  width: 250px;
+  height: 150px;
+  background: #071221;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-text {
+  color: #f472b6; /* Rose Pink */
+  font-size: 0.9rem;
+  letter-spacing: 5px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  animation: fadeIn 1.5s infinite alternate;
+}
+
+.logo-text {
+  color: #3b82f6; /* Blue */
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.bottom-text {
+  position: absolute;
+  bottom: 15px;
+  font-size: 8px;
+  color: #cbd5e1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #3b82f6;
+  border-radius: 15px;
+  animation: borderRotate 2s linear infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+/* Preloader එක අයින් වෙන කොට පාවිච්චි වන Class එක */
+.loader-hide {
+    opacity: 0;
+    visibility: hidden;
+}
